@@ -22,6 +22,31 @@
             bindings = <&kp DOUBLE_QUOTES>;
             key-positions = <20 21>;
         };
+
+        migi {
+            bindings = <&mkp RCLK>;
+            key-positions = <19 20>;
+        };
+
+        hidari {
+            bindings = <&mkp LCLK>;
+            key-positions = <19 20>;
+        };
+
+        naka {
+            bindings = <&mkp MCLK>;
+            key-positions = <19 20>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <10 11>;
+        };
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <0 1>;
+        };
     };
 
     macros {
