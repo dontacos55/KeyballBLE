@@ -50,10 +50,10 @@
     };
 
     macros {
-        to_layer_0: to_layer_0 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+        at: to_layer_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp AT_SIGN>;
             label = "TO_LAYER_0";
         };
     };
@@ -62,7 +62,7 @@
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
-            bindings = <&mo>, <&to_layer_0>;
+            bindings = <&mo>, <&at>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -84,7 +84,7 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R           &kp T                                                      &kp Y    &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &lt 1 F         &kp G        &mkp RCLK                        &kp MINUS    &kp H    &kp J  &lt 5 K    &kp L    &kp MINUS
+&kp A             &kp S         &kp D         &lt 1 F         &kp G        &mkp RCLK                        &kp MINUS    &kp H    &kp J  &lt 5 K    &kp L    &at
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V           &lt 6 B      &mkp LCLK                        &kp SLASH    &lt 1 B  &kp M  &kp COMMA  &kp DOT  &kp UP_ARROW
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &kp LANGUAGE_1  &lt 2 SPACE  &lt_to_layer_0 3 LANGUAGE_2      &lt 2 ENTER  &kp DEL                             &kp DOWN_ARROW
             >;
@@ -94,10 +94,10 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                          &kp F12
+&kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp ASTERISK  &kp SLASH                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
+&kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans        &trans     &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PLUS      &kp MINUS  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
+&kp KP_NUMBER_0  &kp KP_N0        &kp DOT          &kp EQUAL     &trans     &trans      &trans   &trans                          &kp F12
             >;
         };
 
