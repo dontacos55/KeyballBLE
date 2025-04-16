@@ -35,7 +35,7 @@
 
         naka {
             bindings = <&mkp MCLK>;
-            key-positions = <20 31>;
+            key-positions = <19 30>;
         };
 
         tab {
